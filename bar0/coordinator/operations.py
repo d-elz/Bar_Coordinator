@@ -203,7 +203,7 @@ class RegisterCoordinator(Coordinator):
     def __init__(self):
         pass
 
-    def coordinator_operation(self,data):
+    def coordinator_operation(self, nym , pk):
         #Testing threads
         #time.sleep(10)
 
@@ -211,10 +211,7 @@ class RegisterCoordinator(Coordinator):
         database_coor = DatabaseOperationCoordinator()
         security_coor = SecurityOperationCoordinator()
 
-        #Spliting data
-        nym = data.split('||||')[1]
-        pk = data.split('||||')[2]
-        nym_pk = data.split('||||')[1] + data.split('||||')[2]
+        nym_pk = str(nym) + str(pk)
 
         ##### 1.Cheking the UserList [nym , pk , sign] if nym exist!
         #check_nym_exist = database_coor.checking_pseudonym(nym)

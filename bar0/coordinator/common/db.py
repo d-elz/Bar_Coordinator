@@ -4,7 +4,7 @@ import sqlite3
 import logging
 
 # TODO: Grab this from constants file.
-DBFILE = "bar0/db/bar0.db"
+DBFILE = "/home/bar-installation/Desktop/bar_env/GitHub/Bar_Coordinator/bar0/db/bar0.db"
 
 class Bardb():
     """ Interface for db storage. Serves as segregation of the persistence layer
